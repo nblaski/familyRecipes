@@ -1,0 +1,29 @@
+
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+<%- include ('../partials/messages') -%>
+
+<div class="container mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+        <h1 class="text-center mb-3">
+        <i class="fas fa-user"></i>  <%=username.name %>'s profile<br><br>
+            <img id="preview" style="width: 200px;" src="<%=username.profileImgURL%>">
+        </h1>
+        <div>
+            <label>Account Email</label>
+            <input type="text" name="email" placeholder="Username" value="<%=username.email%>" readonly><br>
+        </div>
+        <div>
+            <label>Account Name</label>
+            <input type="text" name="full-name" placeholder="Full name" value="<%=username.name%>" readonly><br><br>
+        </div>
+        <div>
+            <a href="/profile/<%=username.id%>/update" class="btn btn-warning btn-block">Edit Profile</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('../partials/footer') -%>
